@@ -17,6 +17,7 @@ pipeline {
 
     environment {
 
+        REGION = 'europe-west2'
         IMAGE_NAME = 'vmimage'
         CONTAINER_NAME = 'vmimage'
 
@@ -69,7 +70,7 @@ pipeline {
 
                 git(
                     branch: 'main',
-                    url: 'https://github.com/kamalateck/vm-pipeline.git'
+                    url: 'https://github.com/NarendharLAKKAM/vm-pipeline.git'
                 )
 
 
@@ -194,7 +195,7 @@ pipeline {
                 withCredentials([
 
                     sshUserPrivateKey(
-                        credentialsId: 'vm-ssh-key',
+                        credentialsId: 'vm-dev-sshkey',
                         keyFileVariable: 'SSH_KEY'
                     )
 
@@ -407,7 +408,7 @@ EOF
                 withCredentials([
 
                     sshUserPrivateKey(
-                        credentialsId: 'vm-uat-ssh-key',
+                        credentialsId: 'uat-vm-sshkey',
                         keyFileVariable: 'SSH_KEY'
                     )
 
