@@ -70,7 +70,7 @@ pipeline {
 
                 git(
                     branch: 'main',
-                    url: 'https://github.com/NarendharLAKKAM/vm-pipeline.git'
+                    url: 'https://github.com/NarendharLAKKAM/jnk-repo.git'
                 )
 
 
